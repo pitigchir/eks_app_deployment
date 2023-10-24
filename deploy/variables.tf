@@ -13,22 +13,25 @@ variable "environment" {
 
 variable "account" {
   type        = number
-  description = "Name of the aws account"
+  description = "aws account number"
 }
 
 variable "ecr_repo" {
   type        = string
   description = "Name of the ecr repository"
+  default     = "appdev-repo"
 }
 
 variable "image_tag" {
   type        = string
   description = "tag of the image"
+  default     = "latest"
 }
 
 variable "src_path" {
   type        = string
   description = "Source path of the application"
+  default     = "../web-api/"
 }
 
 variable "force_image_rebuild" {
@@ -51,14 +54,17 @@ variable "kubernetes_config_context" {
 variable "application_name" {
   type        = string
   description = "Name of the application deployed on kubernetes"
+  default     = "appdev"
 }
 
 variable "application_port" {
   type        = number
   description = "Listening port of the application"
+  default     = 80
 }
 
 variable "no_of_replicas" {
   type        = string
   description = "Number of replicas of the application deployed in kubernetes"
+  default     = 2
 }

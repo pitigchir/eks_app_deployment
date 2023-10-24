@@ -25,7 +25,32 @@
     * Update local kubeconfig with eks cluster details using below step mentioned under README of eks-cluster if not done yet. <region> = aws region where eks cluster created, value for <cluster_name> can be obtained by 
       with terraform output
         aws eks update-kubeconfig --region <region> --name <cluster_name>
-    * Update terraform.tfvars with suitable variable values
+    * Update terraform.tfvars with suitable variable values. Example values can be found below.
+
+    region                   = "us-east-1"
+
+    environment              = "appdev"
+
+    account                  = <account-name>
+
+    ecr_repo                 = "app-dev-repo"
+
+    image_tag                = "latest"
+
+    src_path                 = "../web-api"
+
+    force_image_rebuild      = false
+
+    kubernetes_config_path   = "~/.kube/config"
+
+    kubernetes_config_context = "<context-name>"
+
+    application_name         = "quotes"
+
+    application_port         = 80
+
+    no_of_replicas           = 2
+
     * Run the command 'terraform init'
     * Run the command 'terraform plan'
     * Once both init and plan are successful run the command 'terraform apply'
