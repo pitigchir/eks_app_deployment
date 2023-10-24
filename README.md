@@ -6,6 +6,8 @@
 
 ## Enhancements
 
+Following enhancements can be done to further optimize the build process and ensure secure, scalable production deployment
+
 * Use a build pipeline for application build and deployment process
 * Use Ingress Controller with Application Load Balancer for secure and controlled access of application urls
 * Integrate ACM certificate to ALB for https access
